@@ -1,0 +1,27 @@
+//Write a C program to demonstrate the difference between: ++a, a++, --a, a--
+#include<stdio.h>
+int main()
+{
+    int a;
+    a = 10;
+    printf("Initial value of a = %d\n", a);
+    printf("Using ++a = %d\n", ++a);
+    printf("value of a after ++a = %d\n", a);
+
+    a = 10;
+    printf("\ninital value of a = %d\n", a);
+    printf("Using a++ = %d\n", a++);
+    printf("value of a after a++ = %d\n", a);
+
+    a = 10;
+    printf("\nInitial value of a = %d\n", a);
+    printf("Using --a = %d\n", --a);
+    printf("Value of a after --a = %d\n", a);
+
+    a = 10;
+    printf("\nInitial value of a = %d\n", a);
+    printf("Using a-- = %d\n", a--);
+    printf("Value of a after a-- = %d\n", a);
+    return 0;
+    
+}
