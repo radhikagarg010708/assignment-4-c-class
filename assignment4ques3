@@ -1,0 +1,38 @@
+// Variable Scope Write a C program without using any user-defined function to demonstrate the difference between: local variable, global variable and static variable Your program should clearly show how the values of these variables change inside main() and inside a block. 
+
+#include <stdio.h>
+int global = 10; // Global variable 
+
+int main() 
+{
+    int local b = 20;    // local variable
+    static int stat c = 30; // static variable
+
+
+    printf("before block:\n");
+    printf("Global variable a = %d\n", global);
+    printf("Local variable b = %d\n", local);
+    printf("Static variable c = %d\n", static);
+    {
+        int block = 40;  // Block variable
+        global = 15;
+        local = 25;
+        stat = 35;
+        block = 45;
+
+        printf("\nIndside block:\n");
+        printf("Global variable = %d\n", global);
+        printf("Local variable = %d\n", local);
+        printf("static variable = %d\n", stat);
+        printf("Block variable = %d\n", block);
+
+    }
+      
+    printf("\nAfter block:\n");
+    printf("Global variable = %d\n", global);
+    printf("Local variable = %d\n", local);
+    printf("static variable = %d\n", static);
+    printf("Block variable = %d\n", block);
+    
+    return 0;
+}
